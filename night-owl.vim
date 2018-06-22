@@ -305,7 +305,7 @@ hi! link javaScriptValue Constant
 
 call s:X("jsFunction","82AAFF","","","","")
 call s:X("jsFuncCall","82AAFF","","","","")
-call s:X("jsImport","","C792EA","italic","","")
+call s:X("jsImport","C792EA","","italic","","")
 call s:X("jsOperator","C792EA","","italic","","")
 call s:X("jsStorageClass","82AAFF","","","","")
 call s:X("jsFuncArgs","7986E7","","","","")
