@@ -13,13 +13,12 @@ endif
 
 let g:colors_name = "night-owl"
 
-
-
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
   let s:low_color = 0
 else
   let s:low_color = 1
 endif
+
 " Color approximation functions by Henry So, Jr. and David Liang
 
 " returns an approximate grey index for the given grey level
@@ -291,7 +290,7 @@ call s:X("Comment",g:light_grey,"","","","")
 call s:X("String","ecc48d","","","","")
 call s:X("Constant",g:purple,"","","","")
 call s:X("Character",g:accent4,"","","","")
-call s:X("Identifier",g:accent2,"","","","")
+call s:X("Identifier","d6deeb","","","","")
 call s:X("Statement",g:accent5,"","","","")
 call s:X("PreProc","c792ea","","","","")
 call s:X("Type",g:accent7,"","","","")
@@ -299,13 +298,22 @@ call s:X("Special",g:accent4,"","","","")
 call s:X("Underlined",g:accent5,"","","","")
 call s:X("Error",g:accent0,g:shade1,"","","")
 call s:X("Todo",g:accent0,g:shade1,"","","")
+call s:X("Conditional","c792ea","","","","")
+call s:X("Repeat","c792ea","","","","")
+call s:X("Operator","7fdbca","","","","")
+call s:X("Visual","ffffff","4373c2","","","")
+call s:X("CursorLine","4b6479","","","","")
+
 
 " javascript 
 hi! link javaScriptValue Constant
 
 call s:X("jsFunction","82AAFF","","","","")
+call s:X("jsObjectFuncName","82AAFF","","","","")
 call s:X("jsFuncCall","82AAFF","","","","")
-call s:X("jsImport","C792EA","","italic","","")
+call s:X("jsImport","C792EA","","","","")
+call s:X("typescriptReserved","C792EA","","italic","","")
+call s:X("jsImportContainer","d6deeb","","","","")
 call s:X("jsOperator","C792EA","","italic","","")
 call s:X("jsStorageClass","82AAFF","","","","")
 call s:X("jsFuncArgs","7986E7","","","","")
@@ -313,14 +321,16 @@ call s:X("jsBuiltins","82AAFF","","","","")
 call s:X("jsString","ECC48D","","","","")
 call s:X("jsTemplateString","D3423E","","","","")
 
-call s:X("htmlString","d6deeb","","","","")
 " HTML
-
 call s:X("htmlTagName","7fdbca","","","","")
+call s:X("jsParen","7fdbca","","","","")
 call s:X("htmlSpecialTagName","addb67","","","","")
-
 call s:X("htmlArg","addb67","","italic","","")
-call s:X("htmlString","ecc48d","","","","")
+call s:X("htmlString","d6deeb","","","","")
+
+" CSS
+call s:X("sassDefinition","7fdbca","","","","")
+call s:X("sassProperty","7fdbca","","","","")
 
 """""""""""""""""""""""
 " Highlighting Groups "
@@ -329,12 +339,12 @@ call s:X("htmlString","ecc48d","","","","")
 
 " NERDTree
 
-call s:X("NERDTreeHelp",g:nightOwl_bg,"","","","")
-call s:X("NERDTreeUp",g:nightOwl_bg,"","","","")
+call s:X("NERDTreeHelp","C792EA","","","","")
+call s:X("NERDTreeUp","C792EA","","","","")
 
-call s:X("NERDTreeOpenable","5F7E97","","","","")
-call s:X("NERDTreeClosable","5F7E90","","","","")
-call s:X("NERDTreeDir","5F7EE7","","","","")
+call s:X("NERDTreeOpenable","ECC48D","","","","")
+call s:X("NERDTreeClosable","C792EA","","","","")
+call s:X("NERDTreeDir","5F7E97","","","","")
 hi! link NERDTreeDirSlash Ignore
 
 """"""""""""
